@@ -10,6 +10,7 @@ header {
 nav {
     float: right;
     margin-right: 5%;
+    margin-top: 20px;
 }
 
 
@@ -43,7 +44,7 @@ article{
     align-items: center;
 }
 
-div{
+.div-ladingpage{
     flex: 70%;
     margin-left: 20%;
 }
@@ -53,11 +54,41 @@ div{
     width: 30%;
     border-radius: 45%;
     flex:20%;
-    margin: 5%;
+    margin:5% 10% 5% auto;
 }
 
 p{
     margin:5px auto;
+}
+
+.div-aboutpage1{
+    flex:30%;
+    margin-left:10% ;
+}
+
+.div-aboutpage2{
+    flex:70%;
+}
+
+section{
+    display: flex;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.img-aboutpage{
+    height: 50px;
+    width: 50px;
+    border-radius: 45%;
+    margin: 10px;
+}
+
+.p-aboutpage{
+    overflow:auto;
+    width: auto;
+    border-radius: 20px;
+    border: slateblue solid 2px;
+    padding: 10px;
 }
 
 
