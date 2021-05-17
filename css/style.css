@@ -1,0 +1,53 @@
+* {
+font-family: 'PT Serif', serif;
+}
+
+header {
+    background-color:rgba(128, 128, 128, .5);
+    height: 10%;
+}
+
+nav {
+    float: right;
+    margin-right: 5%;
+}
+
+
+
+li {
+    list-style-type: none;
+    display: inline;
+    font-size: 20px;
+    padding: 5px;
+    margin: 5px; 
+}
+
+.logo{
+    height: 100%;
+    width: auto;
+    margin: 5px;
+    padding: 5px;
+}
+
+
+
+article{
+    background-color: bisque;
+    border: solid;
+    border-radius: 20px;
+    border-color: pink;
+    border-width: 3px;
+    padding: 10px;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.shi{
+    height: 30%;
+    width: 30%;
+    border-radius: 45%;
+    float: right;
+    margin-right: 10%;
+    margin-bottom: 10%;
+}
+
