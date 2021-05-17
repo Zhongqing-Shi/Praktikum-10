@@ -9,6 +9,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
     </head>
     <body>
         <header>
@@ -38,7 +39,7 @@
                 <div class="div-aboutpage1">
                     <section>
                         <img class="img-aboutpage" src="image/bachelor.jpg" alt="TU Daian">
-                        <a class="a-aboutpage" href="#lebenslauf">Bachelor</a>
+                        <a onclick="animation()" class="a-aboutpage" href="#lebenslauf">Bachelor</a>
                     </section>
                     <section>
                         <img class="img-aboutpage" src="image/kit.jpg" alt="KIT">
@@ -53,8 +54,8 @@
                         <a class="a-aboutpage" href="#lebenslauf">Skills</a> 
                     </section>
                 </div>
-                <div id="lebenslauf" class="div-aboutpage2"> 
-                    <p class="p-aboutpage">
+                <div class="div-aboutpage2"> 
+                    <p id="lebenslauf" class="p-aboutpage">
                         Lorem ipsum dolor sit amet, consetetur sadipscing 
                         elitr, sed diam nonumy eirmod tempor invidunt ut 
                         labore et dolore magna aliquyam erat, sed diam 
@@ -73,6 +74,7 @@
                 </div>
             </article>
         </main>
+        <script src="js/script.js"></script>
     </body>
 
 </html>
