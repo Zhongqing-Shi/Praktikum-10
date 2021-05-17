@@ -39,15 +39,26 @@ article{
     border-width: 3px;
     padding: 10px;
     margin: 10px;
-    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+div{
+    flex: 70%;
+    margin-left: 20%;
 }
 
 .shi{
     height: 30%;
     width: 30%;
     border-radius: 45%;
-    float: right;
-    margin-right: 10%;
-    margin-bottom: 10%;
+    flex:20%;
+    margin: 5%;
 }
+
+p{
+    margin:5px auto;
+}
+
+
 
