@@ -152,6 +152,8 @@ p.p-aboutpage{
     padding: 20px;
     background-color: turquoise;
     flex:1;
+    text-align: center;
+    border-radius: 100px;
 }
 
 .div-contact{
@@ -166,6 +168,11 @@ p.p-aboutpage{
     padding: 10px;
     height: 100px;
     width: auto;
+}
+
+.image-portfolio{
+    border-radius: 30px;
+    margin: 30px;
 }
 
 
