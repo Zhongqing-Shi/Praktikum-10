@@ -47,11 +47,11 @@ h3{
 
 
 
-li {
-    display: inline;
+#nav li {
     font-size: 20px;
     padding: 5px;
     margin: 5px; 
+    display: inline;
 }
 
 li a:hover{
@@ -175,7 +175,56 @@ p.p-aboutpage{
     margin: 30px;
 }
 
+.bars{
+    margin-bottom: 15px;
+}
 
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+span{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.line{
+    height: 5px;
+    width: 100%;
+    background-color: mintcream;
+    position: relative;
+}
+
+.line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgb(69, 69, 146);
+}
+
+.java::before{
+    width: 70%;
+}
+
+.html::before{
+    width: 60%;
+}
+
+.css::before{
+    width: 60%;
+}
+
+.js::before{
+    width: 70%;
+}
+
+.sql::before{
+    width: 40%;
+}
 
 
 @keyframes fade {
