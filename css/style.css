@@ -1,6 +1,6 @@
 
 header {
-    background-color:rgba(128, 128, 128, .5);
+    background-color:rgba(128, 128, 128,.5);
     display: block;
     position: sticky;
     top: 0;
@@ -47,7 +47,11 @@ li a:hover{
     padding: 5px;
 }
 
-
+.content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
 article{
     background-color: bisque;
@@ -57,10 +61,8 @@ article{
     border-width: 3px;
     padding: 10px;
     margin: 10px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 }
+
 
 .div-ladingpage{
     flex: 70%;
