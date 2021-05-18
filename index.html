@@ -10,17 +10,25 @@
         <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
     </head>
     <body>
         <header>
-            <img class="logo" src="image/logo.png" alt="logo von createment">
-            <nav id="nav" role="navigation" >
-                <ul>
-                    <li ><a href="#home-section">Home</a></li>
-                    <li ><a href="#about-section">About me</a></li>
+            <nav>
+                <div class="logo">
+                    <img class="logo" src="image/logo.png" alt="logo von createment">
+                </div> 
+                <ul class="menu">
+                    <li><a href="#home-section">Home</a></li>
+                    <li><a href="#about-section">About me</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
-                    <li ><a href="#contact-section">Contact</a></li>
+                    <li><a href="#contact-section">Contact</a></li>
                 </ul>
+                <div class="menu-btn">
+                    <i class="fa fa-bars"></i>
+                </div>
             </nav>
         </header>
         <main>
@@ -59,42 +67,32 @@
                             <a class="a-aboutpage" href="#aboutme">Skills</a> 
                         </section>
                     </div>
-                    <div class="div-aboutpage2"> 
-                        <div id="lebenslauf">
-                            <div class="bars">
-                                <div class="info">
-                                    <span>Java</span>
-                                    <span>70%</span>
+                    <div id="lebenslauf" class="div-aboutpage2"> 
+                        <div id="lebenslauf" class="carousel">
+                            <div class="card">
+                                <div class="box">
+                                    <img src="image/shi.jpg" alt="">
                                 </div>
-                                <div class="line java"></div>
                             </div>
-                            <div class="bars">
-                                <div class="info">
-                                    <span>HTML</span>
-                                    <span>60%</span>
+                            <div class="card">
+                                <div class="box">
+                                    <img src="image/shi.jpg" alt="">
                                 </div>
-                                <div class="line html"></div>
                             </div>
-                            <div class="bars">
-                                <div class="info">
-                                    <span>CSS</span>
-                                    <span>60%</span>
+                            <div class="card">
+                                <div class="box">
+                                    <img src="image/shi.jpg" alt="">
                                 </div>
-                                <div class="line css"></div>
                             </div>
-                            <div class="bars">
-                                <div class="info">
-                                    <span>Javascript</span>
-                                    <span>70%</span>                                 
+                            <div class="card">
+                                <div class="box">
+                                    <img src="image/shi.jpg" alt="">
                                 </div>
-                                <div class="line js"></div>
                             </div>
-                            <div class="bars">
-                                <div class="info">
-                                    <span>MySQL</span>
-                                    <span>40%</span>                     
+                            <div class="card">
+                                <div class="box">
+                                    <img src="image/shi.jpg" alt="">
                                 </div>
-                                <div class="line sql"></div>
                             </div>
                         </div>
                     </div>
