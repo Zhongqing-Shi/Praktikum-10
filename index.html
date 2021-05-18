@@ -17,8 +17,8 @@
             <nav role="navigation" >
                 <ul>
                     <li ><a href="#home-section">Home</a></li>
-                    <li ><a href="#about-section">About</a></li>
-                    <li><a href="#portofolie">Portofolie</a></li>
+                    <li ><a href="#about-section">About me</a></li>
+                    <li><a href="#portofolie">Portfolio</a></li>
                     <li ><a href="#contact-section">Contact</a></li>
                 </ul>
             </nav>
@@ -35,7 +35,7 @@
                 </div>
                 <img class="shi" src="image/shi.jpg" alt="Foto von mir">
             </article>
-            <article>
+            <article> 
                 <div class="div-aboutpage1">
                     <section>
                         <img class="img-aboutpage" src="image/bachelor.jpg" alt="TU Daian">
@@ -71,6 +71,46 @@
                         sdfsdfsadfsd rew asd resr s srs se rs r sdrs dsd 
                         sd r ssd rsd sd sd 
                     </p>
+                </div>
+            </article>
+            <article>
+                <div class="div-portfolio">
+                    <div><img src="" alt=""></div>
+                    <h3>Cooking</h3>
+                    <p>dfdsfsdfsdfsdfsd</p>
+                </div>
+                <div class="div-portfolio">
+                    <div><img src="" alt=""></div>
+                    <h3>Cooking</h3>
+                    <p>dfdsfsdfsdfsdfsd</p>
+                </div>
+                <div class="div-portfolio">
+                    <div><img src="" alt=""></div>
+                    <h3>Cooking</h3>
+                    <p>dfdsfsdfsdfsdfsd</p>
+                </div>
+            </article>
+            <article>
+                <div>
+                    <p>
+                        E-mail: zhongqing@createment.team <br>
+                        Addresse: Speditionstr.15a, 40221, Düsseldorf <br>
+                        Telefon: +49 17645981789
+                    </p>
+                </div>
+                <div>
+                    <h1>Kontaktformular</h1>
+                    <form action="mailto:info@streichelzoo-sued.fk" method="post" enctype="text/plain">
+                         Vorname:
+                        <input id="vorname" oninput="vornamecheck()" type="text" name="vorname" size="30" /><br /><br />
+                         E-Mail Adresse:
+                        <input id="mail" onblur="mailcheck()" type="text" name="email" size="30" /><br /><br />
+                         Deine Frage:<br /><br />
+                        <textarea id="kommentar" oninput="frage()" name="kommentar"
+                             rows="7" cols="60" placeholder="Füge hier Deine Frage ein!"></textarea><br /><br />
+                        <input onclick="createcookie()" type="submit" value="Frage abschicken" />
+                        <input type="reset" value="Eingaben löschen" />
+                     </form>
                 </div>
             </article>
         </main>

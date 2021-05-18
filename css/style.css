@@ -125,13 +125,20 @@ p.p-aboutpage{
     height: 200px;
 }
 
+.div-portfolio{
+    margin: 10px;
+    padding: 20px;
+    background-color: turquoise;
+    flex:10%;
+}
+
+
+
+
 @keyframes fade {
     from{opacity: 0;}
     to{opacity: 1;}
 }
 
-@keyframes appear {
-    to{opacity: 1;}
-}
 
 
