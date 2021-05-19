@@ -28,7 +28,7 @@ $(document).ready(function(){
         loop:true,
         autoplayTimeout:2000,
         autoplayHoverPause:true,
-        responsive:{
+        /*responsive:{
             0:{
                 items:1,
                 nav:flase
@@ -41,7 +41,7 @@ $(document).ready(function(){
                 items:3,
                 nav:flase
             }
-        }
+        }*/
     });
 })
     
