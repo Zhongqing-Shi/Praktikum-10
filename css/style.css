@@ -225,20 +225,16 @@ p.p-aboutpage{
     height: 200px;
 }
 
-.div-portfolio{
-    margin: 10px;
-    padding: 20px;
-    
+.div-portfolio{ 
     /*background:linear-gradient(to right,#606390,#EFE5D3);*/
     flex:1;
     text-align: center;
-    border-radius: 100px;
     width: 15%;
+    margin: 10px;
 }
 
 .div-image{
     padding: 5%;
-    margin: 20% 20% 5% 20%;
     align-items: center;
     justify-content: center;
 }
@@ -260,9 +256,9 @@ p.p-aboutpage{
 }
 
 .image-portfolio{
-    width: 100%;
-    height: auto;
-    border-radius: 30px;
+    width: 200px;
+    height: 200px;
+    
 }
 
 .bars{
