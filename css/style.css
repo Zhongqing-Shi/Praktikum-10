@@ -1,22 +1,23 @@
 *{
     font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 h1{
+    color: rgb(28, 31, 91);
     font-size: 50px;
-    font-family: cursive;
+    font-family: 'Merriweather', serif;
     text-align: center;
-    text-decoration: underline;
 }
 
 h2{
+    color: rgb(28, 31, 91);
     font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 h3{
-    color: rgba(48, 43, 78, 0.5);
+    color: rgba(28, 31, 91, 0.9);
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
 }
@@ -24,7 +25,7 @@ h3{
 /*header design*/
 
 header {
-    background-color:rgba(128, 128, 128,.5);
+    background-color:rgb(28,31,91);
     position: sticky;
     top: 0;
     width: 100%;
@@ -54,10 +55,13 @@ nav {
 
 .menu a{
     font-size: 25px;
+    text-decoration: none;
+    color: white;
+    
 }
 
 .menu li a:hover{
-    color: white;
+    color: rgb(191, 193, 227);
     transition: all 0.5s ease;
 }
 
@@ -78,8 +82,9 @@ nav {
 }
 /*Homepage design*/
 .div-home{
-    flex: 70%;
-    margin-left: 10%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .logo-createment{
@@ -92,19 +97,18 @@ nav {
 .slogen{
     font-family:'PT Serif', serif; 
     font-size: 30px;
-    color:rgb(194, 116, 26);
+    color:rgb(96, 99, 144);
     font-style: italic;
 }
 
 .slogen:hover{
-    text-shadow:rgb(194, 116, 26) 10px 10px 20px ;
+    text-shadow:rgb(239, 229, 211) 10px 10px 20px ;
     transform: scale(1.1);
 }
 
 .icon-home{
     height: 20%;
-    width: 40%;
-    display: flex;
+    width: 100%;
     margin-bottom: 20px;
 }
 
@@ -113,57 +117,16 @@ nav {
 }
 
 .img-icon{
-    height: 30px;
-    width: 60px;
-    border-radius: 15px;
     margin-right: 20px;
 }
 
-.menu2 li {
-    padding: 5px;
-    margin: 5px 10px; 
-    list-style: none;
-    display: inline;
-}
-
-.menu2 a{
-    font-size: 25px;
-}
-
-.menu2 li a:hover{
-    color: white;
-    transition: all 0.5s ease;
-}
-
-.div-aboutpage2 nav{
-    justify-content: center;
-}
-
-article{
-    background-image:url("../../image/background.png");
-    background-repeat:round;
-    border: solid;
-    border-radius: 20px;
-    border-color: rgb(179, 150, 194);
-    border-width: 3px;
-    padding: 10px;
-    margin: 10px;
-}
-
-.shi{
-    height: 30%;
-    width: 30%;
+.photo{
+    height: 60%;
+    width: 60%;
     border-radius: 45%;
-    flex:20%;
-    margin:5% 10% 5% auto;
 }
 
-p{
-    margin:5px auto;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 25px;
-}
-
+/*About me-Page design*/
 .div-aboutpage1{
     margin-left: 10%;
     flex: 1;
@@ -177,6 +140,46 @@ p{
     margin-right: 10%;
 }
 
+
+
+.menu2 li {
+    padding: 5px;
+    margin:  5px 10px ; 
+    list-style: none;
+    display: inline;
+}
+
+.menu2 a{
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+.menu2 li a:hover{
+    color: rgb(28,31,91);
+    text-shadow: white 10px 10px 20px;
+    transition: all 0.5s ease;
+}
+
+.div-aboutpage2 nav{
+    justify-content: center;
+}
+
+article{
+    background:linear-gradient(to left,#EFE5D3, #606390);
+    border: solid;
+    border-radius: 20px;
+    border-color: black;
+    border-width: 3px;
+    padding: 10px;
+    margin: 10px;
+}
+
+p{
+    margin:5px auto;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 25px;
+}
 
 section{
     display: flex;
@@ -206,13 +209,16 @@ p.p-aboutpage{
 .a-aboutpage{
     margin-left: 10px;
     font-size: 30px;
-    color:rgb(130, 11, 241) ;
+    color:white ;
+    text-decoration: none;
 }
 
-.a-aboutpage:hover{
-    color: white;
-    text-shadow: black 10px 10px 20px;
+.a-aboutpage:hover{   
+    color: rgb(28, 31, 91);
+    /*color: rgb(163, 148, 119);*/
+    text-shadow: white 10px 10px 20px;
     transition: all 0.5s ease;
+
 }
 
 .article-aboutpage{
@@ -222,7 +228,8 @@ p.p-aboutpage{
 .div-portfolio{
     margin: 10px;
     padding: 20px;
-    background-color: turquoise;
+    
+    /*background:linear-gradient(to right,#606390,#EFE5D3);*/
     flex:1;
     text-align: center;
     border-radius: 100px;
@@ -240,7 +247,8 @@ p.p-aboutpage{
     margin: 10px;
     padding: 20px;;
     flex:1;
-    background-color: lightseagreen;
+    
+    /*background: linear-gradient(to left,#d7d3db, #bfc1e3);*/
     width: 40%;
 }
 
@@ -341,7 +349,7 @@ span{
     margin-right: 5px;
     outline: none!important;
     border-radius: 50%;
-    border:2px solid rgb(69, 69, 146)!important;
+    border:2px solid rgb(28, 31, 91)!important;
 }
 
 .owl-dot.active{
@@ -351,7 +359,7 @@ span{
 
 .owl-dot.active,
 .owl-dot:hover{
-    background:rgb(69, 69, 146)!important ;
+    background:rgb(28, 31, 91)!important ;
 }
 
 
@@ -362,7 +370,15 @@ span{
 
 /*responsive design*/
 @media (max-width:991px) {
-/*header*/
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    /*header*/
     nav{
         padding: 0 50px;
         text-align: center;
@@ -375,7 +391,7 @@ span{
         left: -100%;
         top: 0;
         text-align: center;
-        background: rgb(204, 204, 216);
+        background: rgba(48, 43, 78);
         transition: all 0.5s ease;
     }
     
@@ -399,9 +415,10 @@ span{
         display: inline-block;
         margin: 10px 0;
         font-size: 25px;
-        color:rgb(130, 11, 241)
+        color:white;
+        text-decoration: none;
     }
-/*Homepage design*/
+    /*Homepage design*/
     .logo-createment{
         margin-bottom:10px;
         padding: 10px;
@@ -414,12 +431,10 @@ span{
         justify-content: center;
     }
 
-    .content{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
+    .photo{
+        height: 30%;
+        width: 30%;
+        border-radius: 45%;
     }
 
     .div-aboutpage1{
