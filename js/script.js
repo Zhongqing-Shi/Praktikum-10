@@ -8,6 +8,7 @@ let skills= "<div class='bars'><div class='info'><span>Java</span><span>70%</spa
             </div><div class='line css'></div></div><div class='bars'><div class='info'><span>Javascript</span><span>70%</span>\
             </div><div class='line js'></div></div><div class='bars'>\
             <div class='info'><span>MySQL</span><span>40%</span></div><div class='line sql'></div></div>";
+let bachelor= 
 
 function fadeout(){
     //lebenslauf= document.getElementById("lebenslauf");
@@ -23,6 +24,23 @@ function end(){
 function animation(event){
     lebenslauf.innerHTML=event;
     fadeout();
+}
+
+function mailcheck() {
+    let mail=document.getElementById("mail").value;
+    if(!mail.match(/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/) && mail!=""){
+        alert("Email Adresse is wrong");
+        setTimeout(function(){document.getElementById("mail").focus();}, 0);
+        
+    }  
+}
+
+function message() {
+    let eingabe=document.getElementById("message").value;
+    if(eingabe.length>300){
+        alert("more than 300 words");
+        document.getElementById("message").value=eingabe.substring(0,300);
+    }
 }
 
 $(document).ready(function(){

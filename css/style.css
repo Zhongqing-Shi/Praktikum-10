@@ -145,8 +145,6 @@ nav {
     width: 60%;
 }
 
-
-
 .menu2 li {
     padding: 5px;
     margin:  5px 10px ; 
@@ -395,8 +393,15 @@ span{
     }
     /*header*/
     nav{
-        padding: 0 50px;
+        padding: 0 20px;
         text-align: center;
+        height: 50px;
+    }
+
+    .logo{
+        height: 100%;
+        width: auto;
+        display: flex;
     }
 
     .menu{
