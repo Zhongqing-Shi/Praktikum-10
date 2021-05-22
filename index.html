@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
     </head>
     <body>
+        <div class="background">
         <header>
             <nav>
                 <div class="logo">
@@ -36,7 +37,7 @@
                 <div class="content">
                     <div class="div-home">
                         <img class="photo" src="image/shi.jpg" alt="Foto von mir">
-                        <h2 >Zhongqing Shi</h2>
+                        <h2 class="vorname" >Zhongqing Shi</h2>
                         <h3>Trainee of Createment</h3>
                         <p class="slogen">
                             Talent is good <br>
@@ -57,34 +58,34 @@
                         <div>
                             <div class="navbar-about">
                                 <img class="img-aboutpage" src="image/bachelor.jpg" alt="TU Daian">
-                                <a class="a-aboutpage" href="javascript:void(0)">Bachelor</a>
+                                <a id="bachelor" onclick="aclick('#bachelor')" class="a-aboutpage" href="javascript:void(0)">Bachelor</a>
                             </div>
                             <div class="navbar-about">
                                 <img class="img-aboutpage" src="image/kit.jpg" alt="KIT">
-                                <a class="a-aboutpage" href="javascript:void(0)">Master</a> 
+                                <a id="master" onclick="aclick('#master')" class="a-aboutpage" href="javascript:void(0)">Master</a> 
                             </div>
                         </div>
                         <div>
                             <div class="navbar-about">
                                 <img class="img-aboutpage" src="image/creatementlogo.png" alt="Createment">
-                                <a class="a-aboutpage" href="javascript:void(0)">Training</a> 
+                                <a id="training" onclick="aclick('#training')" class="a-aboutpage" href="javascript:void(0)">Training</a> 
                             </div>
                             <div class="navbar-about">
                                 <img class="img-aboutpage" src="image/skills.jpg" alt="Skills">
-                                <a onclick="animation(skills)" class="a-aboutpage" href="javascript:void(0)">Skills</a> 
+                                <a id="skills" onclick="aclick('#skills')" class="a-aboutpage" href="javascript:void(0)">Skills</a> 
                             </div>
                         </div>
                     </div>
                     <div id="lebenslauf" class="div-aboutpage2"> 
-                        <div class="carousel owl-carousel">
+                        <div class="carousel owl-carousel shadow">
                             <div class="card">
                                 <div class="box">
-                                    <img src="image/bachelor/bachelor1.jpg" alt="">
+                                    <img class="liuuu" src="image/bachelor/bachelor1.jpg" alt="">
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="box">
-                                    <img src="image/bachelor/bachelor2.jpg" alt="">
+                                    <img class="liuuu" src="image/bachelor/bachelor2.jpg" alt="">
                                 </div>
                             </div>
                             <div class="card">
@@ -108,7 +109,7 @@
                                 </div>
                             </div>
                         </div><br>
-                        <p>
+                        <p class="shadow">
                             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
                             sed diam nonumy eirmod tempor invidunt ut labore et dolore 
                             magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
@@ -119,7 +120,6 @@
                             sed diam voluptua. At vero eos et accusam et justo duo dolores et 
                             ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est 
                             Lorem ipsum dolor sit amet.
-                         
                         </p> 
                     </div>
                 </div>
@@ -128,7 +128,7 @@
             <article id="portfolio">
                 <h1>Portfolio</h1>
                 <div class="content">
-                    <div class="div-portfolio">
+                    <div class="div-portfolio shadow">
                         <div class="div-image"><img class="image-portfolio" src="image/IT.png" alt=""></div>
                         <h4>Talent in IT</h4>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
@@ -137,7 +137,7 @@
                             et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
                         </p>
                     </div>
-                    <div class="div-portfolio">
+                    <div class="div-portfolio shadow">
                         <div class="div-image"><img class="image-portfolio" src="image/creatementlogo.png" alt=""></div>
                         <h4>Frontend-Developer</h4>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
@@ -146,7 +146,7 @@
                             et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
                         </p>
                     </div>
-                    <div class="div-portfolio">
+                    <div class="div-portfolio shadow">
                         <div class="div-image"><img class="image-portfolio" src="image/ability.jpg" alt=""></div>
                         <h4>Extra abilities</h4>
                         <div>
@@ -185,6 +185,7 @@
             </article>
         </main>
         <script src="js/script.js"></script>
+    </div>
     </body>
 
 </html>

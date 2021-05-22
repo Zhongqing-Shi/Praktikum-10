@@ -8,7 +8,31 @@ let skills= "<div class='bars'><div class='info'><span>Java</span><span>70%</spa
             </div><div class='line css'></div></div><div class='bars'><div class='info'><span>Javascript</span><span>70%</span>\
             </div><div class='line js'></div></div><div class='bars'>\
             <div class='info'><span>MySQL</span><span>40%</span></div><div class='line sql'></div></div>";
-let bachelor= 
+
+let bachelor= "<div class='card'><div class='box'>\
+<img src='image/bachelor/bachelor1.jpg' alt=''></div></div><div class='card'>\
+<div class='box'><img src='image/bachelor/bachelor2.jpg' alt=''></div>\
+</div><div class='card'><div class='box'><img src='image/bachelor/bachelor3.jpg' alt=''>\
+</div></div><div class='card'><div class='box'><img src='image/bachelor/bachelor4.jpg' alt=''>\
+</div></div><div class='card'><div class='box'><img src='image/bachelor/bachelor5.jpg' alt=''>\
+</div></div><div class='card'><div class='box'><img src='image/bachelor/bachelor6.jpg' alt=''>\
+</div></div><br></br>";
+
+/*"<div class='carousel owl-carousel'><div class='card'><div class='box'>\
+                <img src='image/bachelor/bachelor1.jpg' alt=''></div></div><div class='card'><div class='box'>\
+                <img src='image/bachelor/bachelor2.jpg' alt=''></div></div><div class='card'><div class='box'>\
+                <img src='image/bachelor/bachelor3.jpg' alt=''></div></div><div class='card'><div class='box'>\
+                <img src='image/bachelor/bachelor4.jpg' alt=''></div></div><div class='card'><div class='box'>\
+                <img src='image/bachelor/bachelor5.jpg' alt=''></div></div><div class='card'><div class='box'>\
+                <img src='image/bachelor/bachelor6.jpg' alt=''></div></div></div><br><p>\
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,\
+                sed diam nonumy eirmod tempor invidunt ut labore et dolore\
+                magna aliquyam erat, sed diam voluptua. At vero eos et accusamet justo duo dolores et ea rebum. Stet clita kasd gubergren,\
+                no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem\
+                ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy\
+                eirmod tempor invidunt ut labore et dolore magna aliquyam erat,sed diam voluptua.\
+                At vero eos et accusam et justo duo dolores etea rebum. Stet clita kasd gubergren,\
+                no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>";*/
 
 function fadeout(){
     //lebenslauf= document.getElementById("lebenslauf");
@@ -24,6 +48,19 @@ function end(){
 function animation(event){
     lebenslauf.innerHTML=event;
     fadeout();
+}
+
+function lockclass(event){
+    $(".div-aboutpage1 a").removeClass("colorlock");
+    $(event).addClass("colorlock");
+}
+
+function aclick(event){
+    fadeout();
+    lockclass(event);
+    let a=document.getElementsByClassName("liuuu");
+    a[0].src="image/master/master2.jpg";
+    a[1].src="image/master/master2.jpg";
 }
 
 function mailcheck() {
@@ -45,6 +82,8 @@ function message() {
 
 $(document).ready(function(){
 
+    lockclass("#bachelor");
+
     $(".menu-btn").click(function(){
         $(".menu").toggleClass("active");
         $(".menu-btn i").toggleClass("active");
@@ -52,9 +91,9 @@ $(document).ready(function(){
 
     $(".carousel").owlCarousel({
         //margin:20,
-        loop:true,
-        autoplayTimeout:2000,
-        autoplayHoverPause:true,
+        //loop:true,
+        //autoplayTimeout:2000,
+        //autoplayHoverPause:true,
         responsive:{
             0:{
                 items:1,
