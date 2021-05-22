@@ -1,7 +1,7 @@
 "use strict";
 
-let lebenslauf=document.getElementById("lebenslauf");
-lebenslauf.addEventListener("animationend", end);
+let intro=document.getElementById("portfolio");
+intro.addEventListener("animationend", end);
 let skills= "<div class='bars'><div class='info'><span>Java</span><span>70%</span></div>\
             <div class='line java'></div></div><div class='bars'><div class='info'><span>HTML</span><span>60%</span></div>\
             <div class='line html'></div></div><div class='bars'><div class='info'><span>CSS</span><span>60%</span>\
@@ -9,45 +9,31 @@ let skills= "<div class='bars'><div class='info'><span>Java</span><span>70%</spa
             </div><div class='line js'></div></div><div class='bars'>\
             <div class='info'><span>MySQL</span><span>40%</span></div><div class='line sql'></div></div>";
 
-let bachelor= "<div class='card'><div class='box'>\
-<img src='image/bachelor/bachelor1.jpg' alt=''></div></div><div class='card'>\
-<div class='box'><img src='image/bachelor/bachelor2.jpg' alt=''></div>\
-</div><div class='card'><div class='box'><img src='image/bachelor/bachelor3.jpg' alt=''>\
-</div></div><div class='card'><div class='box'><img src='image/bachelor/bachelor4.jpg' alt=''>\
-</div></div><div class='card'><div class='box'><img src='image/bachelor/bachelor5.jpg' alt=''>\
-</div></div><div class='card'><div class='box'><img src='image/bachelor/bachelor6.jpg' alt=''>\
-</div></div><br></br>";
+let bachelorimgsrc =["image/bachelor/bachelor1.jpg",
+                    "image/bachelor/bachelor2.jpg",
+                    "image/bachelor/bachelor3.jpg",
+                    "image/bachelor/bachelor4.jpg",
+                    "image/bachelor/bachelor5.jpg"];
 
-/*"<div class='carousel owl-carousel'><div class='card'><div class='box'>\
-                <img src='image/bachelor/bachelor1.jpg' alt=''></div></div><div class='card'><div class='box'>\
-                <img src='image/bachelor/bachelor2.jpg' alt=''></div></div><div class='card'><div class='box'>\
-                <img src='image/bachelor/bachelor3.jpg' alt=''></div></div><div class='card'><div class='box'>\
-                <img src='image/bachelor/bachelor4.jpg' alt=''></div></div><div class='card'><div class='box'>\
-                <img src='image/bachelor/bachelor5.jpg' alt=''></div></div><div class='card'><div class='box'>\
-                <img src='image/bachelor/bachelor6.jpg' alt=''></div></div></div><br><p>\
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,\
-                sed diam nonumy eirmod tempor invidunt ut labore et dolore\
-                magna aliquyam erat, sed diam voluptua. At vero eos et accusamet justo duo dolores et ea rebum. Stet clita kasd gubergren,\
-                no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem\
-                ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy\
-                eirmod tempor invidunt ut labore et dolore magna aliquyam erat,sed diam voluptua.\
-                At vero eos et accusam et justo duo dolores etea rebum. Stet clita kasd gubergren,\
-                no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>";*/
+let masterimgsrc=["image/master/master1.jpg",
+                  "image/master/master2.jpg",
+                  "image/master/master3.jpg",
+                  "image/master/master4.jpg",
+                  "image/master/master5.jpg"];
+
+let trainingimgsrc=["image/training/julia.jpg",
+                  "image/training/michelle.jpg",
+                  "image/training/elena.jpg",
+                  "image/training/alex.jpg",
+                  "image/training/michael.jpg"];
 
 function fadeout(){
-    //lebenslauf= document.getElementById("lebenslauf");
-    lebenslauf.style.animation="fade 2s";
+    intro.style.animation="fade 2s";
 }
 
 
 function end(){
-    //lebenslauf= document.getElementById("lebenslauf");
-    lebenslauf.style.animation="";
-}
-
-function animation(event){
-    lebenslauf.innerHTML=event;
-    fadeout();
+    intro.style.animation="";
 }
 
 function lockclass(event){
@@ -55,12 +41,36 @@ function lockclass(event){
     $(event).addClass("colorlock");
 }
 
-function aclick(event){
+function contentChange(ar){
+    let temp=document.getElementsByClassName("imgdisplay");
+    document.getElementById("carousel").style.display="";
+    for(let i=0;i<5;i++){
+        temp[i].src=ar[i];
+    }
+    document.getElementById("resume").innerHTML="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, \
+                                                    sed diam nonumy eirmod tempor invidunt ut labore et dolore \
+                                                    magna aliquyam erat, sed diam voluptua. At vero eos et accusam \
+                                                    et justo duo dolores et ea rebum. Stet clita kasd gubergreno sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem \
+                                                    ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy \
+                                                    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, \
+                                                    sed diam voluptua. At vero eos et accusam et justo duo dolores etea rebum. Stet clita kasd gubergren, no sea takimata sanctus estLorem ipsum dolor sit amet.";
+}
+
+function skillsdisplay(){
+    document.getElementById("resume").innerHTML=skills;
+    document.getElementById("carousel").style.display="none";
+}
+
+function aclick(event,ar){
     fadeout();
     lockclass(event);
-    let a=document.getElementsByClassName("liuuu");
-    a[0].src="image/master/master2.jpg";
-    a[1].src="image/master/master2.jpg";
+    contentChange(ar);
+}
+
+function skillclick(event){
+    fadeout();
+    lockclass(event);
+    skillsdisplay();
 }
 
 function mailcheck() {
@@ -68,7 +78,6 @@ function mailcheck() {
     if(!mail.match(/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/) && mail!=""){
         alert("Email Adresse is wrong");
         setTimeout(function(){document.getElementById("mail").focus();}, 0);
-        
     }  
 }
 
@@ -91,9 +100,9 @@ $(document).ready(function(){
 
     $(".carousel").owlCarousel({
         //margin:20,
-        //loop:true,
-        //autoplayTimeout:2000,
-        //autoplayHoverPause:true,
+        loop:false,
+        autoplayTimeout:2000,
+        autoplayHoverPause:true,
         responsive:{
             0:{
                 items:1,

@@ -58,58 +58,53 @@
                         <div>
                             <div class="navbar-about">
                                 <img class="img-aboutpage" src="image/bachelor.jpg" alt="TU Daian">
-                                <a id="bachelor" onclick="aclick('#bachelor')" class="a-aboutpage" href="javascript:void(0)">Bachelor</a>
+                                <a id="bachelor" onclick="aclick('#bachelor',bachelorimgsrc)" class="a-aboutpage" href="javascript:void(0)">Bachelor</a>
                             </div>
                             <div class="navbar-about">
                                 <img class="img-aboutpage" src="image/kit.jpg" alt="KIT">
-                                <a id="master" onclick="aclick('#master')" class="a-aboutpage" href="javascript:void(0)">Master</a> 
+                                <a id="master" onclick="aclick('#master',masterimgsrc)" class="a-aboutpage" href="javascript:void(0)">Master</a> 
                             </div>
                         </div>
                         <div>
                             <div class="navbar-about">
                                 <img class="img-aboutpage" src="image/creatementlogo.png" alt="Createment">
-                                <a id="training" onclick="aclick('#training')" class="a-aboutpage" href="javascript:void(0)">Training</a> 
+                                <a id="training" onclick="aclick('#training',trainingimgsrc)" class="a-aboutpage" href="javascript:void(0)">Training</a> 
                             </div>
                             <div class="navbar-about">
                                 <img class="img-aboutpage" src="image/skills.jpg" alt="Skills">
-                                <a id="skills" onclick="aclick('#skills')" class="a-aboutpage" href="javascript:void(0)">Skills</a> 
+                                <a id="skills" onclick="skillclick()" class="a-aboutpage" href="javascript:void(0)">Skills</a> 
                             </div>
                         </div>
                     </div>
-                    <div id="lebenslauf" class="div-aboutpage2"> 
-                        <div class="carousel owl-carousel shadow">
+                    <div id="intro" class="div-aboutpage2"> 
+                        <div id="carousel" class="carousel owl-carousel shadow">
                             <div class="card">
                                 <div class="box">
-                                    <img class="liuuu" src="image/bachelor/bachelor1.jpg" alt="">
+                                    <img class="imgdisplay" src="image/bachelor/bachelor1.jpg" alt="">
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="box">
-                                    <img class="liuuu" src="image/bachelor/bachelor2.jpg" alt="">
+                                    <img class="imgdisplay" src="image/bachelor/bachelor2.jpg" alt="">
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="box">
-                                    <img src="image/bachelor/bachelor3.jpg" alt="">
+                                    <img class="imgdisplay" src="image/bachelor/bachelor3.jpg" alt="">
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="box">
-                                    <img src="image/bachelor/bachelor4.jpg" alt="">
+                                    <img class="imgdisplay" src="image/bachelor/bachelor4.jpg" alt="">
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="box">
-                                    <img src="image/bachelor/bachelor5.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="box">
-                                    <img src="image/bachelor/bachelor6.jpg" alt="">
+                                    <img class="imgdisplay" src="image/bachelor/bachelor5.jpg" alt="">
                                 </div>
                             </div>
                         </div><br>
-                        <p class="shadow">
+                        <p id="resume" class="shadow">
                             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
                             sed diam nonumy eirmod tempor invidunt ut labore et dolore 
                             magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
@@ -164,26 +159,31 @@
                 <div class="content">
                     <div class="div-contact">
                         <img class="logo-contact" src="image/logo.png" alt="">
-                        <p>E-mail: zhongqing@createment.team</p><br>
-                        <p>Addresse: Speditionstr.15a, 40221, Düsseldorf</p><br>
-                        <p>Telefon: +49 17645981789</p><br>
+                        <p class="p-contact">E-mail: zhongqing@createment.team</p><br>
+                        <p class="p-contact">Addresse: Speditionstr.15a, 40221, Düsseldorf</p><br>
+                        <p class="p-contact">Telefon: +49 17645981789</p>
                     </div>
                     <div class="div-contact">
-                        <form action="mailto:info@streichelzoo-sued.fk" method="post" enctype="text/plain">
+                        <form action="mailto:zhongqing@createment.team" method="post" enctype="text/plain">
                              Name:
                             <input id="name" type="text" name="name" size="10" /><br /><br />
                              E-Mail Address:
                             <input id="mail" onblur="mailcheck()" type="text" name="email" size="20" /><br /><br />
-                             Comment:<br /><br />
+                             Message:<br /><br />
                             <textarea id="message" oninput="message()" name="comment"
                                  rows="7" cols="30" placeholder="please write something(less than 300 words)"></textarea><br /><br />
-                            <input class="submit-btn" type="submit" value="Submit" />
+                            <input class="submit-btn" type="submit" value="Message me" />
                             
                          </form>
                     </div>
                 </div>
             </article>
         </main>
+        <footer>
+            <div class="datenschutz">
+              <a href="datenschutz.html">Impressum und Datenschutz</a></li>
+              <!--Die gewünschten Kontaktdaten einfügen-->
+          </footer>
         <script src="js/script.js"></script>
     </div>
     </body>
