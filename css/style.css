@@ -460,8 +460,28 @@ footer{
     transition: all 0.5s ease;
 }
 
+.datenschutzpage{
+    padding-bottom: 50px;
+}
 
+.datenschutzpage p{
+    margin:10px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 25px;
+    color: black;
+    padding: 10px;
+    text-align:center;
+    margin: 0 20%;
+}
 
+.datenschutzpage strong{
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.datenschutzpage a{
+    text-decoration: none;
+    color: rgb(28, 31, 91);
+}
 
 @keyframes fade {
     from{opacity: 0;}
@@ -636,6 +656,17 @@ footer{
     textarea{
         font-size: 15px;
     }
+
+    .datenschutzpage p{
+        margin:10px;
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 15px;
+        color: black;
+        padding: 10px;
+        text-align:center;
+        margin: 0 10px;
+    }
+    
     
 
     
