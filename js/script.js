@@ -27,6 +27,9 @@ let trainingimgsrc=["image/training/julia.jpg",
                   "image/training/alex.jpg",
                   "image/training/michael.jpg"];
 
+
+  
+
 function fadeout(){
     intro.style.animation="fade 2s";
 }

@@ -3,6 +3,81 @@
     font-family: 'Noto Sans', sans-serif;
 }
 
+/* Roulette*/
+.back-img{
+    width: 80%;
+    padding-top: 80%;
+    background: url("../image/game/bigwheel.png") no-repeat;
+    background-size: 100%;
+    position: relative;
+}
+.lot-desc{
+    top:5px;
+    bottom:0;
+    left:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background: url("../image/game/smallwheel.png") no-repeat;
+    background-size: 100%; 
+    margin:auto;
+    position: absolute;
+}
+.lot-btn{
+    top:46%;
+    left:50%;
+    margin-left:-60px;
+    margin-top:-60px;
+    width: 120px;
+    height: 120px;
+    background: url("../image/game/start.png") no-repeat;
+    background-size: 120px 120px;
+    position: absolute;
+}
+
+.roulette{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.recipe li {
+    padding: 5px;
+    margin: 5px 20px; 
+    list-style: none;
+    display: inline;
+    
+}
+
+.recipe a{
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    
+}
+
+.recipe li a:hover{
+    color: rgb(184, 37, 69);
+    transition: all 0.5s ease;
+}
+
+.nav-recipe{
+    padding-bottom: 20px;
+    text-align: center;
+    margin-left: -10px;
+    margin-bottom: 10px;
+}
+
+.dish{
+    flex: 1;
+}
+
+
 .background{
     width: 100%;
     height: 100%;
@@ -19,7 +94,7 @@
     bottom: 0;
     right: 0;
     position: absolute;
-    z-index: -1; 
+    z-index: -2; 
 }
 
 h1{
@@ -53,8 +128,21 @@ h3{
 }
 
 h4{
+    font-size: 20px;
     color: rgb(184, 37, 69);
+    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+h5{
+    font-size: 30px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+    padding-top: 150px;
+    margin-top:-100px;
+    position: relative;
+    z-index: -1;
 }
 
 /*header design*/
@@ -95,7 +183,8 @@ nav {
 }
 
 .menu li a:hover{
-    color: rgb(191, 193, 227);
+    color: rgb(184, 37, 69);
+    background: white;
     transition: all 0.5s ease;
 }
 
@@ -108,7 +197,7 @@ nav {
 }
 /*Es gilt für den erste div-tag aller Seiten*/
 .content{
-    display: flex;
+    display:inline-flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -298,9 +387,6 @@ p{
     margin: 10px;
     padding: 20px;;
     flex:1;
-    
-    /*background: linear-gradient(to left,#d7d3db, #bfc1e3);*/
-
 }
 
 .logo-contact{
@@ -503,6 +589,11 @@ footer{
         text-align: center;
         padding: 40px 0 0 0;
     }
+
+    h5{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
     
     .vorname{
         color: rgb(28, 31, 91);
@@ -665,6 +756,33 @@ footer{
         padding: 10px;
         text-align:center;
         margin: 0 10px;
+    }
+
+    .lot-btn{
+        top:46%;
+        left:50%;
+        margin-left:-30px;
+        margin-top:-30px;
+        width: 60px;
+        height: 60px;
+        background: url("../image/game/start.png") no-repeat;
+        background-size: 60px 60px;
+        position: absolute;
+    }
+
+    .recipe li{
+        display: block;
+        text-align: center;
+        margin:0;
+        width: 90%;
+    }
+
+    .recipe li a{
+        display: inline-block;
+        font-size: 20px;
+        color:white;
+        text-decoration: none;
+        text-align: center;
     }
     
     
