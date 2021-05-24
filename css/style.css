@@ -203,14 +203,14 @@ article{
 }
 
 /*About me section design*/
-.div-aboutpage1{
+.div1-aboutpage{
     margin-left: 10%;
     flex: 1;
     width: 30%;
     margin-bottom: 20px;
 }
 
-.div-aboutpage2{
+.div2-aboutpage{
     flex: 2;
     margin-left:10%;
     margin-right: 10%;
@@ -219,11 +219,11 @@ article{
     flex-direction: column;
 }
 
-.div-aboutpage2 p{
+.div2-aboutpage p{
     text-align: left;
 }
 
-.div-aboutpage2 strong{
+.div2-aboutpage strong{
     font-size: 20px;
 }
 
@@ -708,7 +708,7 @@ footer{
     }
 
     /*about me section design*/
-    .div-aboutpage1{
+    .div1-aboutpage{
         justify-content: center;
         align-items: center;
         margin-bottom: 20px;
@@ -716,13 +716,13 @@ footer{
         flex-direction: row;
     }
 
-    .div-aboutpage2{
+    .div2-aboutpage{
         justify-content: center;
         align-items: center;
         width:100% ;
     }
 
-    .div-aboutpage2 strong{
+    .div2-aboutpage strong{
         font-size: 15px;
     }
 
