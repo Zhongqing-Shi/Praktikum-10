@@ -98,7 +98,6 @@ function contentChange(arimg, arresume){
 
 //the skills is displayed
 function skillsdisplay(event){
-    lockclass(event);
     resume.innerHTML=skills;
     carousel.style.display="none";
     picture.style.display="none";
