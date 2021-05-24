@@ -1,7 +1,12 @@
 "use strict";
 
 let intro=document.getElementById("intro");
+let carousel=document.getElementById("carousel");
+let picture=document.getElementById("pic");
+let resume=document.getElementById("resume");
+
 intro.addEventListener("animationend", end);
+
 let skills= "<div class='bars'><div class='info'><span>Java</span><span>70%</span></div>\
             <div class='line java'></div></div><div class='bars'><div class='info'><span>HTML</span><span>60%</span></div>\
             <div class='line html'></div></div><div class='bars'><div class='info'><span>CSS</span><span>60%</span>\
@@ -24,8 +29,7 @@ let bachelorresume =["Hello, my name is Zhongqing Shi. I'm from China. Here is w
                         <strong class='italic'>TTS BoHai Machinery (Dalian) Co., Ltd, China</strong><br>\
                         » CAD Graphical Drawing <br>\
                         » Co-design of the processing operations <br>\
-                        » Quality management: endurance test <br>",
-                        "Dalian University of Technology"];
+                        » Quality management: endurance test <br>", "Dalian University of Technology"];
 
 let masterimgsrc=["image/master/master1.jpg",
                   "image/master/master2.jpg",
@@ -47,8 +51,7 @@ let masterresume = ["After I graduated, I decided to go to Germany to continue m
                     <strong>Vehicle Experiment</strong> (10/2017–02/2018)<br>\
                     <strong class='italic'>Karlsruher Institut für Technologie</strong><br>\
                     » Driving resistence testing <br>\
-                    » Data analysing in dynamic driving <br>",
-                    "Karlsruher Institut für Technologie"];
+                    » Data analysing in dynamic driving <br>", "Karlsruher Institut für Technologie"];
 
 let trainingimgsrc=["image/training/julia.jpg",
                   "image/training/michelle.jpg",
@@ -63,53 +66,59 @@ let trainingresume = ["During my master study, I realized that the traditional m
                     <strong class='italic'>Createment GmbH</strong><br>\
                     » Front-End Development: Programming (HTML & CSS, JavaScript) <br>\
                     » Back-End Development: Programming (SQL, Java) <br>\
-                    » Useful Tools: Github, Node <br>",
-                    "Colleagues from Createment"];
+                    » Useful Tools: Github, Node <br>", "Colleagues from Createment"];
   
-
+//animation fadeout
 function fadeout(){
     intro.style.animation="fade 2s";
 }
 
-
+//stop animation
 function end(){
     intro.style.animation="";
 }
 
+//lock the color of the navbar, when it is clicked on.
 function lockclass(event){
     $(".div-aboutpage1 a").removeClass("colorlock");
     $(event).addClass("colorlock");
 }
 
-function contentChange(ar, resume){
+//the corresponding content of resume is displayed
+function contentChange(arimg, arresume){
     let temp=document.getElementsByClassName("imgdisplay");
-    document.getElementById("carousel").style.display="";
-    document.getElementById("pic").style.display="";
     for(let i=0;i<5;i++){
-        temp[i].src=ar[i];
+        temp[i].src=arimg[i];
     }
-    document.getElementById("resume").innerHTML=resume[0];
-    document.getElementById("pic").innerHTML=resume[1];
+    resume.innerHTML=arresume[0];
+    picture.innerHTML=arresume[1];
+    carousel.style.display="";
+    picture.style.display="";
 }
 
-function skillsdisplay(){
-    document.getElementById("resume").innerHTML=skills;
-    document.getElementById("carousel").style.display="none";
-    document.getElementById("pic").style.display="none";
+//the skills is displayed
+function skillsdisplay(event){
+    lockclass(event);
+    resume.innerHTML=skills;
+    carousel.style.display="none";
+    picture.style.display="none";
 }
 
-function aclick(event,ar,resume){
+//the click-function of the navbar
+function aclick(event,arimg,arresume){
     fadeout();
     lockclass(event);
-    contentChange(ar,resume);
+    contentChange(arimg,arresume);
 }
 
+//the click-function of skills
 function skillclick(event){
     fadeout();
     lockclass(event);
     skillsdisplay();
 }
 
+//check, whether the mailaddress is soild or not
 function mailcheck() {
     let mail=document.getElementById("mail").value;
     if(!mail.match(/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/) && mail!=""){
@@ -118,6 +127,7 @@ function mailcheck() {
     }  
 }
 
+//check the length of the message
 function message() {
     let eingabe=document.getElementById("message").value;
     if(eingabe.length>300){
@@ -126,15 +136,18 @@ function message() {
     }
 }
 
-$(document).ready(function(){
 
+$(document).ready(function(){
+    //the color of bachelor link is set, when html is loaded
     lockclass("#bachelor");
 
+    //the header responsive design
     $(".menu-btn").click(function(){
         $(".menu").toggleClass("active");
         $(".menu-btn i").toggleClass("active");
     });
 
+    //the animation of the picture display in about me section
     $(".carousel").owlCarousel({
         //margin:20,
         loop:false,

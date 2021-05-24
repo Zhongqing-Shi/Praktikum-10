@@ -82,16 +82,17 @@ function fadeout(){
     dish.style.animation="fade 3s";
 }
 
-
 function end(){
     dish.style.animation="";
 }
 
+//display the recipes on the page
 function showrecipe(recipe){
     fadeout();
     dish.innerHTML=map.get(recipe);
     dish.style.visibility="visible";
 }
+
 
 $(document).ready(function(){
 
@@ -102,66 +103,69 @@ $(document).ready(function(){
 
 })
 
-//Roulette
+//Roulette game function
 let roulette = {
-    options: [], 
-    bRotate: false, 
-    dtimer: null,  
+    options: [], //how many options on the roulette
+    bRotate: false, //check if the rotation begins
+    dtimer: null,  //stop the rotation
     timeInterval: 2, 
     deg: 0, 
     speed: 0, 
-    turnNum: 4, 
-    sigalTurnNum: 1 
+    turnNum: 4, // set the number of the total loops
+    sigalTurnNum: 1 // the number of current loops
   };
   let lottery = document.getElementById("lottery");
   
-  function rotateFn(angles, txt) {
-    
-    clearInterval(roulette.dtimer);
-    roulette.dtimer = null;
-    
-    roulette.deg = roulette.deg + roulette.speed;
+//main function of rotation
+function rotateFn(angles, txt) {
   
-    if (roulette.deg < angles + 1440) {
-      lottery.style.transform = "rotate(" + roulette.deg + "deg)";
-      if (roulette.deg % 360 === 0) { 
-        roulette.sigalTurnNum += 1;
-        if (roulette.sigalTurnNum === roulette.turnNum - 2) { 
-          roulette.speed = 3;
-        } else if (roulette.sigalTurnNum === roulette.turnNum - 1) { 
-          roulette.speed = 2;
-        };
-      }
-      if (roulette.sigalTurnNum === roulette.turnNum - 1) { 
-        roulette.speed = (roulette.speed <= 1.8) ? 1.8 : (roulette.speed - 1.2);
+  clearInterval(roulette.dtimer);
+  roulette.dtimer = null;
+  
+  roulette.deg = roulette.deg + roulette.speed;
+
+  if (roulette.deg < angles + 1440) {
+    lottery.style.transform = "rotate(" + roulette.deg + "deg)";
+    if (roulette.deg % 360 === 0) { 
+      roulette.sigalTurnNum += 1;
+      if (roulette.sigalTurnNum === roulette.turnNum - 2) { 
+        roulette.speed = 3;
+      } else if (roulette.sigalTurnNum === roulette.turnNum - 1) { 
+        roulette.speed = 2;
       };
-      roulette.dtimer = setInterval(function() {
-        rotateFn(angles, txt);
-      }, roulette.timeInterval);
-    } else {
-      
-      setTimeout(function(){showrecipe(txt)},1000);
-      roulette.bRotate = !roulette.bRotate;
     }
-  };
-
-  roulette.options = ["chicken", "shrimp", "egg", "beef"];
-  document.getElementById("pointer").onclick = function() {
-    if (roulette.bRotate) return false;
+    if (roulette.sigalTurnNum === roulette.turnNum - 1) { 
+      roulette.speed = (roulette.speed <= 1.8) ? 1.8 : (roulette.speed - 1.2);
+    };
+    roulette.dtimer = setInterval(function() {
+      rotateFn(angles, txt);
+    }, roulette.timeInterval);
+  } else {
+    
+    setTimeout(function(){showrecipe(txt)},1000);
     roulette.bRotate = !roulette.bRotate;
-    
-    roulette.deg = 0;
-    roulette.speed = 4;
-    roulette.sigalTurnNum = 0;
-    
-    var item = rnd(1, roulette.options.length);
+  }
+};
 
-    var angles = -(item - 1) * (360 / roulette.options.length);
-    console.log(item);
-    rotateFn(angles, roulette.options[item - 1]);
-  }
+
+roulette.options = ["chicken", "shrimp", "egg", "beef"];
+
+//onclick function
+document.getElementById("pointer").onclick = function() {
+  if (roulette.bRotate) return false;
+  roulette.bRotate = !roulette.bRotate;
   
-  function rnd(n, m) {
-    var random = Math.floor(Math.random() * (m - n + 1) + n);
-    return random;
-  }
+  roulette.deg = 0;
+  roulette.speed = 4;
+  roulette.sigalTurnNum = 0;
+  
+  var item = rnd(1, roulette.options.length);
+  var angles = -(item - 1) * (360 / roulette.options.length);
+  rotateFn(angles, roulette.options[item - 1]);
+}
+
+//pick a number randomly to decide which is the chosen option.
+function rnd(n, m) {
+  var random = Math.floor(Math.random() * (m - n + 1) + n);
+  return random;
+}
