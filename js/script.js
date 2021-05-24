@@ -80,7 +80,7 @@ function end(){
 
 //lock the color of the navbar, when it is clicked on.
 function lockclass(event){
-    $(".div-aboutpage1 a").removeClass("colorlock");
+    $(".div1-aboutpage a").removeClass("colorlock");
     $(event).addClass("colorlock");
 }
 
