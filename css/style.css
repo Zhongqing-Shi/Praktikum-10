@@ -3,6 +3,8 @@
     font-family: 'Noto Sans', sans-serif;
 }
 
+
+
 /* Roulette*/
 .back-img{
     width: 80%;
@@ -75,6 +77,7 @@
 
 .dish{
     flex: 1;
+    visibility: hidden;
 }
 
 
@@ -143,6 +146,15 @@ h5{
     margin-top:-100px;
     position: relative;
     z-index: -1;
+}
+
+h6{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /*header design*/
@@ -268,6 +280,20 @@ nav {
     flex-direction: column;
 }
 
+.div-aboutpage2 p{
+    text-align: left;
+}
+
+.div-aboutpage2 strong{
+    font-size: 20px;
+}
+
+.italic{
+    font-size: 20px;
+    font-style: italic;
+}
+
+
 .shadow{
     box-shadow: 20px 0 20px -20px black ,
                 -20px 0 20px -20px black ,
@@ -310,7 +336,7 @@ article{
 p{
     margin:10px;
     font-family: 'Noto Sans', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     color: black;
     padding: 10px;
     text-align:justify;
@@ -377,8 +403,13 @@ p{
     transition: all 0.5s ease;
 }
 
+.div-portfolio a{
+    color: rgb(184, 37, 69);
+    text-decoration: none;
+}
+
 .div-image{
-    padding: 5%;
+    padding-top: 5%;
     align-items: center;
     justify-content: center;
 }
@@ -387,6 +418,12 @@ p{
     margin: 10px;
     padding: 20px;;
     flex:1;
+}
+
+.div-contact p{
+    font-size: 25px;
+    padding: 0;
+    text-align: left;
 }
 
 .logo-contact{
@@ -496,11 +533,6 @@ span{
 .owl-dot.active,
 .owl-dot:hover{
     background:rgb(184, 37, 69)!important ;
-}
-
-p.p-contact{
-    text-align: left;
-    padding: 0;
 }
 
 input{
@@ -673,7 +705,7 @@ footer{
         width: auto;
     }
     .div-image{
-        padding: 5%;
+        padding-top: 5%;
         align-items: center;
         justify-content: center;
     }
@@ -698,6 +730,16 @@ footer{
         width:100% ;
     }
 
+    .div-aboutpage2 strong{
+        font-size: 15px;
+    }
+
+    .italic{
+        font-size: 15px;
+        font-style: italic;
+    }
+
+
     .img-aboutpage{
         height: 30px;
         width: 30px;
@@ -711,7 +753,6 @@ footer{
         
     }
 
-    
 
     .navbar-about{
         flex: 1;
@@ -783,6 +824,12 @@ footer{
         color:white;
         text-decoration: none;
         text-align: center;
+    }
+
+    .div-contact p{
+        font-size: 15px;
+        padding: 0;
+        text-align: left;
     }
     
     

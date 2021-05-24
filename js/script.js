@@ -1,6 +1,6 @@
 "use strict";
 
-let intro=document.getElementById("portfolio");
+let intro=document.getElementById("intro");
 intro.addEventListener("animationend", end);
 let skills= "<div class='bars'><div class='info'><span>Java</span><span>70%</span></div>\
             <div class='line java'></div></div><div class='bars'><div class='info'><span>HTML</span><span>60%</span></div>\
@@ -15,11 +15,40 @@ let bachelorimgsrc =["image/bachelor/bachelor1.jpg",
                     "image/bachelor/bachelor4.jpg",
                     "image/bachelor/bachelor5.jpg"];
 
+let bachelorresume =["Hello, my name is Zhongqing Shi. I'm from China. Here is where I got my Bachelor degree in machanical engineering,\
+                        Dalian University of Technology, which locates in Dalian, a beautiful city by the sea and my hometown.<br><br>\
+                        <strong>Mechanical Engineering (English), Bachelor</strong> (09/2010  – 06/2015) <br>\
+                        <strong class='italic'>Dalian University of Technology</strong><br>\
+                        » Graduation Design: The design of the injection Mold for the back cover of clock (CAD) <br><br>\
+                        <strong>Internship as Constructor and Test Engineer</strong> (06/2014  – 08 /2014) <br>\
+                        <strong class='italic'>TTS BoHai Machinery (Dalian) Co., Ltd, China</strong><br>\
+                        » CAD Graphical Drawing <br>\
+                        » Co-design of the processing operations <br>\
+                        » Quality management: endurance test <br>",
+                        "Dalian University of Technology"];
+
 let masterimgsrc=["image/master/master1.jpg",
                   "image/master/master2.jpg",
                   "image/master/master3.jpg",
                   "image/master/master4.jpg",
                   "image/master/master5.jpg"];
+
+let masterresume = ["After I graduated, I decided to go to Germany to continue my study. Fortunately, I got a offer from KIT\
+                    (Karlsruher Institut für Technologie), where I got my master degree also in mechanical engineering, major in \
+                    automotive engineering and mechatronics.<br><br>\
+                    <strong>Mechanical Engineering, Master</strong> (10/2016  – 04/2020)<br>\
+                    <strong class='italic'>Karlsruher Institut für Technologie</strong><br>\
+                    » Thesis:Developing a Decision Tool (Programming in C#) <br><br>\
+                    <strong>Thesis (C# programming, in English)</strong> (10/2018–06/2019)<br>\
+                    <strong class='italic'>Karlsruher Institut für Technologie</strong><br>\
+                    » Multiple users can log in remotely (within the same LAN) <br>\
+                    » The users can import files from Excel <br>\
+                    » Establishing interactions with SQL database to store data <br></br>\
+                    <strong>Vehicle Experiment</strong> (10/2017–02/2018)<br>\
+                    <strong class='italic'>Karlsruher Institut für Technologie</strong><br>\
+                    » Driving resistence testing <br>\
+                    » Data analysing in dynamic driving <br>",
+                    "Karlsruher Institut für Technologie"];
 
 let trainingimgsrc=["image/training/julia.jpg",
                   "image/training/michelle.jpg",
@@ -27,7 +56,15 @@ let trainingimgsrc=["image/training/julia.jpg",
                   "image/training/alex.jpg",
                   "image/training/michael.jpg"];
 
-
+let trainingresume = ["During my master study, I realized that the traditional machanical engineering relys more and more on new \
+                    technology, such as Information. So I always wanted to learn some programming knowledge. Finally, I got a chance  \
+                    in Createment, where I can systematically learn how to programm. In addition, I have met a bunch of new friends here.<br><br>\
+                    <strong>IT intensive Training</strong> (10/2018–06/2019)<br>\
+                    <strong class='italic'>Createment GmbH</strong><br>\
+                    » Front-End Development: Programming (HTML & CSS, JavaScript) <br>\
+                    » Back-End Development: Programming (SQL, Java) <br>\
+                    » Useful Tools: Github, Node <br>",
+                    "Colleagues from Createment"];
   
 
 function fadeout(){
@@ -44,30 +81,27 @@ function lockclass(event){
     $(event).addClass("colorlock");
 }
 
-function contentChange(ar){
+function contentChange(ar, resume){
     let temp=document.getElementsByClassName("imgdisplay");
     document.getElementById("carousel").style.display="";
+    document.getElementById("pic").style.display="";
     for(let i=0;i<5;i++){
         temp[i].src=ar[i];
     }
-    document.getElementById("resume").innerHTML="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, \
-                                                    sed diam nonumy eirmod tempor invidunt ut labore et dolore \
-                                                    magna aliquyam erat, sed diam voluptua. At vero eos et accusam \
-                                                    et justo duo dolores et ea rebum. Stet clita kasd gubergreno sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem \
-                                                    ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy \
-                                                    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, \
-                                                    sed diam voluptua. At vero eos et accusam et justo duo dolores etea rebum. Stet clita kasd gubergren, no sea takimata sanctus estLorem ipsum dolor sit amet.";
+    document.getElementById("resume").innerHTML=resume[0];
+    document.getElementById("pic").innerHTML=resume[1];
 }
 
 function skillsdisplay(){
     document.getElementById("resume").innerHTML=skills;
     document.getElementById("carousel").style.display="none";
+    document.getElementById("pic").style.display="none";
 }
 
-function aclick(event,ar){
+function aclick(event,ar,resume){
     fadeout();
     lockclass(event);
-    contentChange(ar);
+    contentChange(ar,resume);
 }
 
 function skillclick(event){

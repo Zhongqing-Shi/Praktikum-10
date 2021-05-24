@@ -58,17 +58,17 @@
                         <div>
                             <div class="navbar-about">
                                 <img class="img-aboutpage" src="image/bachelor.jpg" alt="TU Daian">
-                                <a id="bachelor" onclick="aclick('#bachelor',bachelorimgsrc)" class="a-aboutpage" href="javascript:void(0)">Bachelor</a>
+                                <a id="bachelor" onclick="aclick('#bachelor',bachelorimgsrc,bachelorresume)" class="a-aboutpage" href="javascript:void(0)">Bachelor</a>
                             </div>
                             <div class="navbar-about">
                                 <img class="img-aboutpage" src="image/kit.jpg" alt="KIT">
-                                <a id="master" onclick="aclick('#master',masterimgsrc)" class="a-aboutpage" href="javascript:void(0)">Master</a> 
+                                <a id="master" onclick="aclick('#master',masterimgsrc,masterresume)" class="a-aboutpage" href="javascript:void(0)">Master</a> 
                             </div>
                         </div>
                         <div>
                             <div class="navbar-about">
                                 <img class="img-aboutpage" src="image/creatementlogo.png" alt="Createment">
-                                <a id="training" onclick="aclick('#training',trainingimgsrc)" class="a-aboutpage" href="javascript:void(0)">Training</a> 
+                                <a id="training" onclick="aclick('#training',trainingimgsrc,trainingresume)" class="a-aboutpage" href="javascript:void(0)">Training</a> 
                             </div>
                             <div class="navbar-about">
                                 <img class="img-aboutpage" src="image/skills.jpg" alt="Skills">
@@ -103,18 +103,20 @@
                                     <img class="imgdisplay" src="image/bachelor/bachelor5.jpg" alt="">
                                 </div>
                             </div>
-                        </div><br>
+                        </div>
+                        <h6 id="pic">Dalian University of Technology</h6><br>
                         <p id="resume" class="shadow">
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-                            sed diam nonumy eirmod tempor invidunt ut labore et dolore 
-                            magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
-                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
-                            no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem 
-                            ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
-                            eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
-                            sed diam voluptua. At vero eos et accusam et justo duo dolores et 
-                            ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est 
-                            Lorem ipsum dolor sit amet.
+                            Hello, my name is Zhongqing Shi. I'm from China. Here is where I got my Bachelor degree, 
+                            Dalian University of Technology, which locates in Dalian, a beautiful city by the sea and my hometown.<br><br>
+                            <strong>Mechanical Engineering (English), Bachelor</strong> (09/2010  – 06/2015) <br>
+                            <strong class="italic">Dalian University of Technology</strong><br>
+                            » Graduation Design: The design of the injection Mold for the back cover of clock (CAD) <br><br>
+                            <strong>Internship as Constructor and Test Engineer</strong> (06/2014  – 08 /2014) <br>
+                            <strong class="italic">TTS BoHai Machinery (Dalian) Co., Ltd, China</strong><br>
+                            » CAD Graphical Drawing <br>
+                            » Co-design of the processing operations <br>
+                            » Quality management: endurance test <br>
+
                         </p> 
                     </div>
                 </div>
@@ -126,29 +128,36 @@
                     <div class="div-portfolio shadow">
                         <div class="div-image"><img class="image-portfolio" src="image/IT.png" alt=""></div>
                         <h4>Talent in IT</h4>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-                            sed diam nonumy eirmod tempor invidunt ut labore et dolore 
-                            magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
-                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+                        <p>I found my talent of IT during the time I did my thesis of master study. I wrote a programm in C# to 
+                            support a procedure in scenario activitys. At the beginning, it was quite hard, because I have never done
+                            anything about IT before. With the help of tutor, I unterstood programming step by step and got really obsessed 
+                            with it. Everytime I accomplished a function, I felt relieved and more motivated to go on. Finally, the programm run
+                            very well and I experienced the beauty of programming. After gradutation, I started to learn Python myself, until
+                            I got the chance to get trained in Createment.
                         </p>
                     </div>
                     <div class="div-portfolio shadow">
                         <div class="div-image"><img class="image-portfolio" src="image/creatementlogo.png" alt=""></div>
                         <h4>Frontend-Developer</h4>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-                            sed diam nonumy eirmod tempor invidunt ut labore et dolore 
-                            magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
-                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+                        <p>
+                            The days in Createment are fun with full of challenges, because this is an intensive training with a opportunity of further training 
+                            in a partner company. Every trainee must learn all the stuff in two month, which is perhaps a 3-year curriculum for a regular IT-student. 
+                            During this time, we basically focuse on front-end programming in Java. Besides the essential knowledge of developing a website, like Java, Javascript, HTML, CSS, 
+                            we also learned how to use some useful tools, such as Github, SQL. This is my first time to learn programming systematically.
+                            I am really looking forward to improving myself in the next training phase in the partner company.
                         </p>
                     </div>
                     <div class="div-portfolio shadow">
                         <div class="div-image"><img class="image-portfolio" src="image/ability.jpg" alt=""></div>
                         <h4>Extra abilities</h4>
                         <div>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-                                sed diam nonumy eirmod tempor invidunt ut labore et dolore 
-                                magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
-                                et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+                            <p>
+                                Besides the knowledge I learned from the training programm, I am also capable of C# and python, as I mentioned
+                                before. But I always think that the best way to master a programming language is to practice in a project. So 
+                                I really hope that I can gain practical experience after. In my spare time, I am a huge fan of cooking. I really 
+                                enjoy collectiong recipes and sharing my dishes with the friends. If you also like cooking, would you mind playing 
+                                a game with me? You will get some recipes from me and try them yourself. Click on the <a href="game.html">"Play"</a>. 
+                                It will lead you to the game. Hope you have fun.
                             </p>
                         </div>
                     </div>
@@ -160,9 +169,9 @@
                 <div class="content">
                     <div class="div-contact">
                         <img class="logo-contact" src="image/logo.png" alt="">
-                        <p class="p-contact">E-mail: zhongqing@createment.team</p><br>
-                        <p class="p-contact">Addresse: Speditionstr.15a, 40221, Düsseldorf</p><br>
-                        <p class="p-contact">Telefon: +49 17645981789</p>
+                        <p>E-mail: zhongqing@createment.team</p><br>
+                        <p>Addresse: Speditionstr.15a, 40221, Düsseldorf</p><br>
+                        <p>Telefon: +49 17645981789</p>
                     </div>
                     <div class="div-contact">
                         <form action="mailto:zhongqing@createment.team" method="post" enctype="text/plain">
