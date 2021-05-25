@@ -4,7 +4,6 @@
 }
 
 h1{
-    color:black;
     font-size: 50px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
@@ -52,7 +51,6 @@ p{
     margin:10px;
     font-family: 'Noto Sans', sans-serif;
     font-size: 20px;
-    color: black;
     padding: 10px;
     text-align:justify;
     
@@ -60,8 +58,7 @@ p{
 
 /*background design*/
 .background{
-    width: 100%;
-    height: 100%;
+    background-size: cover;
     display: block;
     position: relative;
 }
@@ -310,7 +307,7 @@ article{
     font-size: 30px;
     color: white;
     text-decoration: none;
-    text-shadow: rgb(60, 55, 42) 10px 10px 10px;
+    text-shadow: black 10px 10px 10px;
 }
 
 .a-aboutpage:hover{   
@@ -461,7 +458,6 @@ textarea{
 footer{
     background-color:rgb(28, 31, 91);
     width: 100%;
-
     bottom: 0;
     z-index: 999;
 }
@@ -555,14 +551,12 @@ footer{
     margin: 5px 20px; 
     list-style: none;
     display: inline;
-    
 }
 
-.recipe a{
+.recipe li a{
     font-size: 25px;
     text-decoration: none;
     color: white;
-    
 }
 
 .recipe li a:hover{
@@ -590,17 +584,13 @@ footer{
 
 /*responsive design*/
 @media (max-width:991px) {
-
     *{
         font-size: 15px;
         font-family: 'Noto Sans', sans-serif;
     }
 
     h1{
-        color:black ;
         font-size: 30px;
-        font-family: Arial, Helvetica, sans-serif;
-        text-align: center;
         padding: 10px 0 0 0;
     }
 
@@ -613,26 +603,12 @@ footer{
 
     p{
         margin: 5px;
-        font-family: 'Noto Sans', sans-serif;
         font-size: 15px;
-    }
-    
-    .vorname{
-        color: rgb(28, 31, 91);
-        font-size: 30px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .vorname:hover{
-        text-shadow: rgb( 80, 33, 84) 10px 10px 10px;
-        transform: scale(1.1);
     }
 
     .content{
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;  
         margin-bottom: 20px;
     }
 
@@ -696,14 +672,6 @@ footer{
     /*Homepage design*/
     .logo-createment{
         margin-bottom:10px;
-        padding: 10px;
-        height: 100px;
-        width: auto;
-    }
-    .div-image{
-        padding-top: 5%;
-        align-items: center;
-        justify-content: center;
     }
 
     .photo{
@@ -712,6 +680,14 @@ footer{
     }
 
     /*about me section design*/
+    .responsive{
+        padding: 10px 50px;
+    }
+
+    .div2-aboutpage p{
+        margin: 0;
+    }
+
     .div1-aboutpage{
         justify-content: center;
         align-items: center;
@@ -732,7 +708,6 @@ footer{
 
     .italic{
         font-size: 15px;
-        font-style: italic;
     }
 
 
@@ -744,18 +719,15 @@ footer{
 
     .a-aboutpage{
         font-size: 20px;
-        color:white ;
-        text-decoration: none;
-        
     }
 
     .navbar-about{
         flex: 1;
         display: flex;
-        flex-direction: column;
         margin-top: 10px;
         flex-direction: row;
     }
+
 
     /*portfolio section design*/
     .image-portfolio{
@@ -768,7 +740,6 @@ footer{
         margin-bottom: 30px;
         padding: 5px;
         height: 50px;
-        width: auto;
     }
 
     .div-contact p{
@@ -787,26 +758,17 @@ footer{
 
     /*Datenschutz page design*/
     .datenschutzpage p{
-        margin:10px;
-        font-family: 'Noto Sans', sans-serif;
         font-size: 15px;
-        color: black;
-        padding: 10px;
-        text-align:center;
         margin: 0 10px;
     }
 
     /*Roulette game page design*/
     .lot-btn{
-        top:46%;
-        left:50%;
         margin-left:-30px;
         margin-top:-30px;
         width: 60px;
         height: 60px;
-        background: url("../image/game/start.png") no-repeat;
         background-size: 60px 60px;
-        position: absolute;
     }
 
     .recipe li{
@@ -819,8 +781,6 @@ footer{
     .recipe li a{
         display: inline-block;
         font-size: 20px;
-        color:white;
-        text-decoration: none;
         text-align: center;
     }
 }
