@@ -601,7 +601,7 @@ footer{
         font-size: 30px;
         font-family: Arial, Helvetica, sans-serif;
         text-align: center;
-        padding: 40px 0 0 0;
+        padding: 10px 0 0 0;
     }
 
     h5{
@@ -612,7 +612,7 @@ footer{
     }
 
     p{
-        margin:5px;
+        margin: 5px;
         font-family: 'Noto Sans', sans-serif;
         font-size: 15px;
     }
@@ -635,6 +635,12 @@ footer{
         justify-content: center;  
         margin-bottom: 20px;
     }
+
+    article{
+        padding: 10px;
+        margin: 5px 10px 0 10px;
+    }
+
     /*header*/
     nav{
         padding: 0 20px;
